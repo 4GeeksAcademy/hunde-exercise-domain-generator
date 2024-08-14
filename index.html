@@ -1,15 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Domain Name Generator</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domain Name Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        #domains {
+            margin-top: 20px;
+            list-style-type: none;
+            padding: 0;
+        }
+        #domains li {
+            margin-bottom: 5px;
+        }
+    </style>
 </head>
 <body>
-  <h1>Domain Name Generator</h1>
-  <p id="excuse">Check the console for domain names!</p>
-
-  <!-- Include your JavaScript file -->
-  <script src="app.js"></script>
+    <h1>Domain Name Generator</h1>
+    <button onclick="generateDomains()">Generate Domains</button>
+    <ul id="domains"></ul>
+    <script src="app.js"></script>
 </body>
 </html>
