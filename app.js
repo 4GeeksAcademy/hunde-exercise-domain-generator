@@ -1,28 +1,23 @@
-// Define arrays with pronouns, adjectives, and nouns
-let pronouns = ['the', 'our'];
-let adjectives = ['great', 'big'];
-let nouns = ['jogger', 'racoon'];
+// Multiplication Table Code
+let multiplicationTable = [];
 
-// Function to generate domain names
-function generateDomains(pronouns, adjectives, nouns) {
-    let domains = [];
-    
-    // Nested loops to create all combinations
-    for (let i = 0; i < pronouns.length; i++) {
-        for (let j = 0; j < adjectives.length; j++) {
-            for (let k = 0; k < nouns.length; k++) {
-                // Concatenate parts to form domain names
-                let domain = `${pronouns[i]}${adjectives[j]}${nouns[k]}.com`;
-                domains.push(domain);
-            }
-        }
+for (let i = 1; i < 11; i++) {
+    for (let j = 1; j < 11; j++) {
+        multiplicationTable.push(`${i} * ${j} = ${i * j}`);
     }
-    
-    return domains;
 }
 
-// Generate the domain names
-let domainNames = generateDomains(pronouns, adjectives, nouns);
+console.log(multiplicationTable);
 
-// Print the domain names to the console
-domainNames.forEach(domain => console.log(domain));
+// Domain Name Generator Code
+let prefix = ['big', 'jogger', 'racoon', 'the', 'our', 'great', 'big', 'important', 'very', 'cool', 'super'];
+let word = ['code', 'coders', 'tech', 'stack', 'geeks', 'computing'];
+
+for (let i = 0; i < prefix.length; i++) {
+    for (let j = 0; j < word.length; j++) {
+        let div = document.createElement('div');
+        div.innerText = `${prefix[i]}${word[j]}.com`;
+        document.body.appendChild(div);
+        console.log(`${prefix[i]}${word[j]}.com`);
+    }
+}
